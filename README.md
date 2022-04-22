@@ -3,9 +3,7 @@
 On this page you will find a how to spin up ECK using terraform. The main idea is to have a Kubernetes cluster up and running with a ECK quickstart running only 3 commands.
 
 ## Demo
-
-https://user-images.githubusercontent.com/16880741/164702453-83a1e2f7-367d-4537-8b15-39454db049c6.mp4
-
+https://user-images.githubusercontent.com/16880741/164702566-aa2b0c7b-d92f-43bf-b41a-6929432ce1e3.mp4
 
 ## Features
 _Every feature will be deployed via terraform_
