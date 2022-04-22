@@ -4,7 +4,8 @@ On this page you will find a how to spin up ECK using terraform. The main idea i
 
 ## Demo
 
-![6dg266](https://user-images.githubusercontent.com/16880741/164702105-1634df22-a63c-4ea5-8524-3ec48b90585e.mov)
+https://user-images.githubusercontent.com/16880741/164702453-83a1e2f7-367d-4537-8b15-39454db049c6.mp4
+
 
 ## Features
 _Every feature will be deployed via terraform_
