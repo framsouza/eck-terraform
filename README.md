@@ -21,6 +21,11 @@ Before starting you should have the following commands installed:
 As you probably know, terraform is an infrastructure as code tool, which means we can describe our infrastructure desire into a file and apply it via terraform.
 Here, we are going to spin up a GKE cluster with 3 nodes running on europe-west1 region, the machines we are going to use is **e2-standard-4** which will give us 4vCPU nad 16GB of memory in each node.
 
-The main file responsible to install everything is call **main.tf** which contains everythin we want to have elasticsearch and kibana running with ECK.
+First, you have to authenticate into Google Cloud console, to so run the following command,
+`gcloud auth application-default login`
+
+Once you are logged it, you should export 2 variables, the Kubernetes config path AND the Google project you are goint to use
+`export KUBE_CONFIG_PATH=~/.kube/config && export GOOGLE_PROJECT=elastic-support-k8s-dev`
+
 
 
