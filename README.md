@@ -1,6 +1,6 @@
 # Installing ECK with Terraform on GCP
 
-On this page you will find a how to spin up ECK using terraform. The main idea is to have a Kubernetes cluster up and running with a ECK quickstart running only 3 commands.
+On this page you will find a how to spin up ECK using terraform. The main idea is to have a Kubernetes cluster and ECK installed by running only 3 commands.
 
 ## Demo
 https://user-images.githubusercontent.com/16880741/164702566-aa2b0c7b-d92f-43bf-b41a-6929432ce1e3.mp4
@@ -31,17 +31,35 @@ Once you are logged it, you should export 2 variables, the Kubernetes config pat
 `export KUBE_CONFIG_PATH=~/.kube/config && export GOOGLE_PROJECT=elastic-support-k8s-dev`
 
 Now, you can run
+
 `terraform init`
 
 It will load the providers and configuration. Right after that, you should run
+
 `terraform plan`
 
 It will show you everything that will be created by terraform, take a moment to check this output.
 Once you are ready, you just need to run:
+
 `terraform apply -parallelism=1`
 
 It will apply your changes in sequence.
+Once everything was applied, you will get an output similar to this,
+
+```
+Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+gke_name = "TO CONNECT TO KUBERNETES: gcloud container clusters get-credentials <KUBERNETES-NAME> --region europe-west1 --project elastic-support-k8s-dev"
+kibana_endpoint = "TO CONNECT TO KIBANA: kubectl port-forward svc/<KIBANA-ENDPOINT> 5601:5601"
+kubernetes_name = "fram-gke-eck"
+```
+
+Once you `port-foward` your kibana service, you can easily access it on your browser via localhost.
 
 ## Wrapping up
 Now, to clean up everything you just need to run
 `terraform destroy`
+
+Happy terraform!
