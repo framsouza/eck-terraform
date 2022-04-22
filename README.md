@@ -25,9 +25,11 @@ As you probably know, terraform is an infrastructure as code tool, which means w
 Here, we are going to spin up a GKE cluster with 3 nodes running on europe-west1 region, the machines we are going to use is **e2-standard-4** which will give us 4vCPU nad 16GB of memory in each node.
 
 First, you have to authenticate into Google Cloud console, to so run the following command,
+
 `gcloud auth application-default login`
 
 Once you are logged it, you should export 2 variables, the Kubernetes config path AND the Google project you are going to use
+
 `export KUBE_CONFIG_PATH=~/.kube/config && export GOOGLE_PROJECT=elastic-support-k8s-dev`
 
 Now, you can run
@@ -60,6 +62,7 @@ Once you `port-foward` your kibana service, you can easily access it on your bro
 
 ## Wrapping up
 Now, to clean up everything you just need to run
+
 `terraform destroy`
 
 Happy terraform!
