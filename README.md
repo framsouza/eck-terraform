@@ -30,7 +30,7 @@ First, you have to authenticate into Google Cloud console, to so run the followi
 
 Once you are logged it, you should export 2 variables, the Kubernetes config path AND the Google project you are going to use
 
-`export KUBE_CONFIG_PATH=~/.kube/config && export GOOGLE_PROJECT=elastic-support-k8s-dev`
+`export KUBE_CONFIG_PATH=~/.kube/config && export GOOGLE_PROJECT=<YOUR-PROJECT-NAME>`
 
 Now, you can run
 
@@ -53,7 +53,7 @@ Apply complete! Resources: 7 added, 0 changed, 0 destroyed.
 
 Outputs:
 
-gke_name = "TO CONNECT TO KUBERNETES: gcloud container clusters get-credentials <KUBERNETES-NAME> --region europe-west1 --project elastic-support-k8s-dev"
+gke_name = "TO CONNECT TO KUBERNETES: gcloud container clusters get-credentials <KUBERNETES-NAME> --region europe-west1 --project <YOUR-PROJECT-NAME>"
 kibana_endpoint = "TO CONNECT TO KIBANA: kubectl port-forward svc/<KIBANA-ENDPOINT> 5601:5601"
 kubernetes_name = "fram-gke-eck"
 ```
